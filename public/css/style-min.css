@@ -148,3 +148,8 @@
 .nav-link{
     font-weight:bold ;
 }
+
+nav img{
+    width: 80px;
+    margin: 0 2rem;
+}

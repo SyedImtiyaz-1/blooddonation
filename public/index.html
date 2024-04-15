@@ -27,13 +27,14 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style-min.css">
     <title>Blood Bank</title>
+
 </head>
 
 <body>
 
     <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark danger-color">
-        <a class="navbar-brand" href="#" style="font-weight: bold;">Blood Bank</a>
+       <img src="./images/u2nk_bae0_220606.jpg" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,36 +47,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#camp">Campaign</a>
+                    <!-- <a class="nav-link" href="#camp">Campaign</a> -->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#con">Contact</a>
                 </li>
 
-            </ul>
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                        <i class="fab fa-google-plus-g"></i>
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                        aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
             </ul>
         </div>
     </nav>
@@ -99,11 +76,11 @@
     <div id="getappt" class="container-fluid" id="container">
         <div class="card text-center" id="prompt">
             <div class="card-body">
-                <h4 class="card-title"><strong>WE ARE HERE FOR HELPING PEOPLE</strong></h4>
+                <h4 class="card-title"><strong>मी रक्तसेवक</strong></h4>
                 <p class="card-text">You can give blood at any of our blood donation venues. We have several donor
                     centers
                     and visit other vanues on various occassions</p>
-                <a href="#form" class="btn btn-danger">REQUEST APPOINTMENT</a>
+                <a href="#con" class="btn btn-danger">REQUEST APPOINTMENT</a>
             </div>
         </div>
     </div>
@@ -274,20 +251,22 @@
                     <div class="card-body px-lg-5 pt-0">
 
                         <!-- Form -->
-                        <form class="text-center" style="color: #757575;" action="#!">
+                        <form method="POST" action="/save" class="text-center" style="color: #757575;">
 
                             <div class="form-row">
                                 <div class="col">
                                     <!-- First name -->
                                     <div class="md-form">
-                                        <input type="text" id="materialRegisterFormFirstName" class="form-control">
+                                        <input type="text" name="fname" id="materialRegisterFormFirstName"
+                                            class="form-control">
                                         <label for="materialRegisterFormFirstName">First name</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <!-- Last name -->
                                     <div class="md-form">
-                                        <input type="email" id="materialRegisterFormLastName" class="form-control">
+                                        <input type="text" name="lname" id="materialRegisterFormLastName"
+                                            class="form-control">
                                         <label for="materialRegisterFormLastName">Last name</label>
                                     </div>
                                 </div>
@@ -297,46 +276,29 @@
                                 <div class="col">
                                     <!-- Email -->
                                     <div class="md-form">
-                                        <input type="email" id="materialRegisterFormEmail" class="form-control">
+                                        <input type="email" name="email" id="materialRegisterFormEmail"
+                                            class="form-control">
                                         <label for="materialRegisterFormEmail">E-mail</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <!-- Phone Number -->
                                     <div class="md-form">
-                                        <input type="password" id="materialRegisterFormPhone" class="form-control"
-                                            aria-describedby="materialRegisterFormPhoneHelpBlock">
+                                        <input type="number" name="phone" id="materialRegisterFormPhone"
+                                            class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
                                         <label for="materialRegisterFormPhone">Phone number</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-row">
-                                <div class="col">
-                                    <!-- Date -->
-                                    <div class="md-form">
-                                        <input type="date" id="materialRegisterFormDate" class="form-control">
-                                        <label for="materialRegisterFormEmail">Date</label>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <!-- Time -->
-                                    <div class="md-form">
-                                        <input type="time" id="materialRegisterFormTime" class="form-control"
-                                            aria-describedby="materialRegisterFormPhoneHelpBlock">
-                                        <label for="materialRegisterFormPhone">Time</label>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="md-form">
-                                <textarea id="materialContactFormMessage" class="form-control md-textarea"
+                                <textarea id="materialContactFormMessage" name="msg" class="form-control md-textarea"
                                     rows="3"></textarea>
                                 <label for="materialContactFormMessage">Message</label>
                             </div>
 
                             <!-- Sign up button -->
-                            <button id="form" class="btn btn-danger btn-rounded btn-block my-4 waves-effect z-depth-0"
+                            <button class="btn btn-danger btn-rounded btn-block my-4 waves-effect z-depth-0"
                                 type="submit">GET APPOINTMENT</button>
 
                         </form>
